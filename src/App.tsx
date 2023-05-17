@@ -1,5 +1,6 @@
 import pokemon from './pokemon.json'
 import './App.css';
+import PokemonRow from './components/PokemonRow';
 
 const App = (): React.ReactElement | JSX.Element => {
   return (
@@ -20,12 +21,7 @@ const App = (): React.ReactElement | JSX.Element => {
         </thead>
         <tbody>
           {
-            pokemon.slice(0,20).map((p: any) => (
-              <tr key={`${p.id}, ${p.name.english}`}>
-                <td>{p.name.english}</td>
-                <td>{p.type.join(", ")}</td>
-              </tr>
-            ))
+            pokemon.slice(0,20).map((p: any) => (<PokemonRow pokemon={p} key={p.id}/>))
           }
         </tbody>
         
