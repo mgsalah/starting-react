@@ -1,6 +1,7 @@
 {
   "name": "starting-react",
   "version": "0.1.0",
+  "private": true,
   "homepage": "https://mgsalah.github.io/starting-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
